@@ -14,164 +14,172 @@
 
         body {
             font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: #eef2f6;
             min-height: 100vh;
-            padding: 20px;
+            padding: 30px 20px;
             display: flex;
             justify-content: center;
             align-items: center;
         }
 
         .card {
-            max-width: 900px;
+            max-width: 1000px;
             width: 100%;
             background: white;
-            border-radius: 32px;
-            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+            border-radius: 24px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
             overflow: hidden;
-            transition: transform 0.2s ease;
         }
 
-        .card:hover {
-            transform: translateY(-4px);
-        }
-
-        .header {
-            background: linear-gradient(135deg, #1e2a3e 0%, #0f172a 100%);
+        /* Logo Header - White Background */
+        .logo-header {
+            background: white;
             padding: 40px 40px 30px 40px;
             text-align: center;
+            border-bottom: 1px solid #f0f0f0;
         }
 
         .logo {
             max-width: 100%;
             height: auto;
-            max-height: 80px;
-            margin-bottom: 20px;
+            max-height: 100px;
+            width: auto;
         }
 
-        .motto {
-            color: #a5f3fc;
-            font-size: 1rem;
-            letter-spacing: 1px;
-            font-weight: 500;
-            border-top: 1px solid rgba(255,255,255,0.1);
-            display: inline-block;
-            padding-top: 15px;
-        }
-
+        /* Content Area */
         .content {
             padding: 40px;
         }
 
+        /* Services Section - Soft Blue */
         .services {
-            background: #f8fafc;
+            background: #f5f9ff;
             border-radius: 20px;
-            padding: 25px;
-            margin-bottom: 30px;
+            padding: 28px;
+            margin-bottom: 28px;
+            border: 1px solid #e8edf5;
         }
 
         .services h2 {
-            color: #1e2a3e;
-            font-size: 1.3rem;
-            margin-bottom: 15px;
+            color: #2c3e50;
+            font-size: 1.35rem;
+            margin-bottom: 12px;
             display: flex;
             align-items: center;
             gap: 8px;
+            font-weight: 600;
+        }
+
+        .services p {
+            color: #5a6e7c;
+            line-height: 1.5;
+            margin-bottom: 18px;
         }
 
         .service-grid {
             display: flex;
             flex-wrap: wrap;
-            gap: 12px;
-            margin-top: 15px;
+            gap: 10px;
+            margin-top: 5px;
         }
 
         .service-tag {
             background: white;
-            border: 1px solid #e2e8f0;
-            padding: 8px 16px;
+            border: 1px solid #dce5f0;
+            padding: 8px 18px;
             border-radius: 40px;
             font-size: 0.85rem;
             font-weight: 500;
-            color: #1e2a3e;
+            color: #2c3e50;
             transition: all 0.2s;
         }
 
         .service-tag:hover {
-            background: #1e2a3e;
+            background: #2c7da0;
             color: white;
-            border-color: #1e2a3e;
+            border-color: #2c7da0;
         }
 
-        /* Essential 8 Section */
+        /* Essential 8 Section - Soft Teal/Navy */
         .essential8 {
-            background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+            background: #eef7f5;
             border-radius: 20px;
-            padding: 25px;
-            margin-bottom: 30px;
-            color: white;
+            padding: 28px;
+            margin-bottom: 28px;
+            border: 1px solid #dde9e6;
         }
 
         .essential8 h2 {
-            font-size: 1.3rem;
-            margin-bottom: 10px;
+            color: #1a5d5c;
+            font-size: 1.35rem;
+            margin-bottom: 8px;
             display: flex;
             align-items: center;
             gap: 10px;
+            font-weight: 600;
         }
 
         .essential8-sub {
-            color: #94a3b8;
+            color: #5a8a88;
             font-size: 0.85rem;
+            margin-bottom: 18px;
+            padding-bottom: 12px;
+            border-bottom: 1px solid #c8dfdb;
+        }
+
+        .essential8 p {
+            color: #3d6b69;
+            font-size: 0.9rem;
             margin-bottom: 20px;
-            border-bottom: 1px solid #334155;
-            padding-bottom: 15px;
+            line-height: 1.5;
         }
 
         .ess-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 15px;
+            grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+            gap: 12px;
             margin: 20px 0;
         }
 
         .ess-item {
-            background: rgba(255,255,255,0.05);
-            border-radius: 12px;
-            padding: 12px;
+            background: white;
+            border-radius: 14px;
+            padding: 14px;
             transition: all 0.2s;
+            border: 1px solid #d4e3e0;
         }
 
         .ess-item:hover {
-            background: rgba(255,255,255,0.1);
             transform: translateX(4px);
+            border-color: #8bc6c1;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
         }
 
         .ess-number {
-            font-size: 1.5rem;
+            font-size: 1.4rem;
             font-weight: bold;
-            color: #38bdf8;
-            margin-bottom: 5px;
+            color: #2c7a78;
+            margin-bottom: 6px;
         }
 
         .ess-title {
             font-weight: 600;
             font-size: 0.85rem;
             margin-bottom: 5px;
+            color: #2c3e50;
         }
 
         .ess-desc {
             font-size: 0.7rem;
-            color: #cbd5e1;
+            color: #6b8a88;
             line-height: 1.4;
         }
 
         .ess-cta {
-            background: #38bdf8;
-            color: #0f172a;
+            background: #2c7a78;
             text-align: center;
-            padding: 12px;
-            border-radius: 12px;
+            padding: 14px;
+            border-radius: 14px;
             font-weight: 600;
             font-size: 0.85rem;
             margin-top: 15px;
@@ -179,90 +187,124 @@
         }
 
         .ess-cta:hover {
-            background: #7dd3fc;
+            background: #1a5d5c;
             transform: scale(1.01);
         }
 
         .ess-cta a {
-            color: #0f172a;
+            color: white;
             text-decoration: none;
             display: block;
         }
 
+        /* Contact Card - Soft Peach/Warm */
         .contact-card {
-            background: linear-gradient(135deg, #fef2e8 0%, #ffe8f0 100%);
+            background: #fef8f0;
             border-radius: 20px;
-            padding: 25px;
-            margin-bottom: 30px;
+            padding: 28px;
+            margin-bottom: 28px;
             text-align: center;
+            border: 1px solid #f0e8dd;
+        }
+
+        .contact-badge {
+            font-size: 0.8rem;
+            font-weight: 600;
+            color: #c28b5c;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 12px;
         }
 
         .phone-number {
-            font-size: 2rem;
+            font-size: 2.1rem;
             font-weight: bold;
-            color: #0f172a;
+            color: #2c3e50;
             letter-spacing: -0.5px;
             margin: 10px 0;
         }
 
         .phone-number a {
             text-decoration: none;
-            color: #0f172a;
+            color: #2c3e50;
         }
 
         .phone-number a:hover {
-            color: #2c7da0;
+            color: #c28b5c;
+        }
+
+        .divider {
+            width: 50px;
+            height: 2px;
+            background: #e6d9cc;
+            margin: 18px auto;
         }
 
         .email-link {
-            font-size: 1.2rem;
+            font-size: 1.15rem;
             margin: 10px 0;
         }
 
         .email-link a {
-            color: #2c7da0;
+            color: #c28b5c;
             text-decoration: none;
             font-weight: 500;
         }
 
         .email-link a:hover {
             text-decoration: underline;
+            color: #a06e42;
         }
 
-        .divider {
-            width: 50px;
-            height: 2px;
-            background: #cbd5e1;
-            margin: 20px auto;
+        .response-time {
+            font-size: 0.8rem;
+            color: #8f7a66;
+            margin-top: 15px;
         }
 
+        /* TeamViewer Section - Soft Gray */
         .teamviewer-section {
             text-align: center;
-            padding: 20px;
-            background: #f1f5f9;
+            padding: 28px;
+            background: #f7f7f9;
             border-radius: 20px;
             margin-bottom: 20px;
+            border: 1px solid #e8e8ed;
+        }
+
+        .teamviewer-section h3 {
+            color: #2c3e50;
+            font-size: 1.15rem;
+            margin-bottom: 8px;
+            font-weight: 600;
+        }
+
+        .teamviewer-section p {
+            color: #6b7a86;
+            font-size: 0.85rem;
+            margin-bottom: 18px;
         }
 
         .btn-teamviewer {
             display: inline-flex;
             align-items: center;
             gap: 10px;
-            background: #1e2a3e;
+            background: #2c7a78;
             color: white;
-            padding: 14px 28px;
+            padding: 14px 32px;
             border-radius: 50px;
             text-decoration: none;
             font-weight: 600;
             margin: 10px 0;
             transition: all 0.2s;
             font-size: 1rem;
+            border: none;
         }
 
         .btn-teamviewer:hover {
-            background: #2c7da0;
+            background: #1a5d5c;
             transform: scale(1.02);
-            box-shadow: 0 10px 20px -5px rgba(0,0,0,0.2);
+            box-shadow: 0 6px 14px rgba(44,122,120,0.2);
         }
 
         .os-links {
@@ -274,40 +316,53 @@
         }
 
         .os-link {
-            color: #2c7da0;
+            color: #7a8c9a;
             text-decoration: none;
-            font-size: 0.9rem;
+            font-size: 0.85rem;
             font-weight: 500;
         }
 
         .os-link:hover {
+            color: #2c7a78;
             text-decoration: underline;
         }
 
+        .tv-note {
+            font-size: 0.7rem;
+            color: #9aaeb9;
+            margin-top: 15px;
+        }
+
+        /* Footer */
         .footer {
-            background: #f8fafc;
-            padding: 20px 40px;
+            background: #fafbfc;
+            padding: 24px 40px;
             text-align: center;
-            border-top: 1px solid #e2e8f0;
+            border-top: 1px solid #eef2f6;
             font-size: 0.8rem;
-            color: #64748b;
+            color: #8a9aa8;
+        }
+
+        .footer strong {
+            color: #2c3e50;
+            font-weight: 600;
         }
 
         .abn {
-            font-size: 0.75rem;
+            font-size: 0.7rem;
             margin-top: 8px;
-            color: #94a3b8;
+            color: #aabbc8;
         }
 
-        @media (max-width: 600px) {
+        @media (max-width: 650px) {
             .content {
                 padding: 25px;
             }
+            .logo-header {
+                padding: 25px 20px;
+            }
             .phone-number {
                 font-size: 1.5rem;
-            }
-            .header {
-                padding: 30px 20px;
             }
             .ess-grid {
                 grid-template-columns: 1fr;
@@ -317,40 +372,33 @@
 </head>
 <body>
     <div class="card">
-        <div class="header">
-            <img src="CompNet-Logo-long.JPG" alt="CompNet Logo" class="logo" onerror="this.style.display='none'">
-            <div class="motto">✨ Putting the human back in IT ✨</div>
+        <!-- Logo Header - White Background -->
+        <div class="logo-header">
+            <img src="CompNet-Logo-long.JPG" alt="CompNet Logo - Putting the human back in IT" class="logo">
         </div>
 
         <div class="content">
-            <!-- Services We Offer -->
+            <!-- Services Section -->
             <div class="services">
-                <h2>🖥️ What We Do</h2>
-                <p style="color: #475569; margin-bottom: 15px;">Complete managed IT support for small businesses. We handle all your technology needs so you can focus on what you do best.</p>
+                <h2>📋 What We Do</h2>
+                <p>Complete managed IT support for small businesses. We handle all your technology needs so you can focus on what you do best.</p>
                 <div class="service-grid">
-                    <span class="service-tag">📊 Microsoft 365</span>
-                    <span class="service-tag">☁️ Google Workspace</span>
-                    <span class="service-tag">📞 Teams Phone Systems</span>
-                    <span class="service-tag">🔒 Essential 8 Compliance</span>
-                    <span class="service-tag">💾 Data Backup</span>
-                    <span class="service-tag">🌐 Network Setup</span>
-                    <span class="service-tag">🖥️ Hardware & Software</span>
-                    <span class="service-tag">🚀 24/7 Monitoring</span>
+                    <span class="service-tag">Microsoft 365</span>
+                    <span class="service-tag">Google Workspace</span>
+                    <span class="service-tag">Teams Phone Systems</span>
+                    <span class="service-tag">Essential 8 Compliance</span>
+                    <span class="service-tag">Cyber Security</span>
+                    <span class="service-tag">Data Backup</span>
+                    <span class="service-tag">Network Setup</span>
+                    <span class="service-tag">24/7 Monitoring</span>
                 </div>
             </div>
 
-            <!-- Essential 8 Cyber Security Section -->
+            <!-- Essential 8 Section -->
             <div class="essential8">
-                <h2>
-                    <span>🛡️</span> 
-                    Essential 8 Cyber Security
-                </h2>
-                <div class="essential8-sub">
-                    Australian Government-backed protection framework | Maturity Level 1, 2 & 3
-                </div>
-                <p style="font-size: 0.9rem; margin-bottom: 15px; color: #e2e8f0;">
-                    We help small businesses achieve and maintain Essential 8 compliance — the gold standard for protecting against 85% of cyber threats.
-                </p>
+                <h2>🛡️ Essential 8 Cyber Security</h2>
+                <div class="essential8-sub">Australian Government-backed protection framework | Maturity Level 1, 2 & 3</div>
+                <p>We help small businesses achieve and maintain Essential 8 compliance — the gold standard for protecting against 85% of cyber threats.</p>
                 
                 <div class="ess-grid">
                     <div class="ess-item">
@@ -402,9 +450,9 @@
                 </div>
             </div>
 
-            <!-- Contact Information -->
+            <!-- Contact Section -->
             <div class="contact-card">
-                <div style="font-size: 0.85rem; font-weight: 600; color: #2c7da0; text-transform: uppercase; letter-spacing: 1px;">Need help? We're here.</div>
+                <div class="contact-badge">Need help? We're here.</div>
                 <div class="phone-number">
                     📞 <a href="tel:+61280077729">+61 2 8007 7729</a>
                 </div>
@@ -412,33 +460,32 @@
                 <div class="email-link">
                     ✉️ <a href="mailto:support@comp.net.au">support@comp.net.au</a>
                 </div>
-                <div style="font-size: 0.85rem; color: #475569; margin-top: 15px;">
+                <div class="response-time">
                     ⏰ Response within 1 hour during business hours
                 </div>
             </div>
 
-            <!-- Remote Support Download -->
+            <!-- TeamViewer Section -->
             <div class="teamviewer-section">
-                <div style="font-size: 1.1rem; font-weight: 600; margin-bottom: 10px;">🆘 Remote Support</div>
-                <p style="color: #475569; font-size: 0.9rem; margin-bottom: 15px;">Click below to download TeamViewer. Our technician will guide you.</p>
+                <h3>🆘 Remote Support</h3>
+                <p>Click below to download TeamViewer. Our technician will guide you.</p>
                 <a href="https://get.teamviewer.com/compnet" class="btn-teamviewer" target="_blank">
                     ⬇️ Download TeamViewer
                 </a>
                 <div class="os-links">
                     <a href="https://get.teamviewer.com/compnet" class="os-link">Windows Version</a>
-                    <span style="color: #cbd5e1;">|</span>
+                    <span style="color: #d0d5da;">|</span>
                     <a href="https://get.teamviewer.com/compnet" class="os-link">Mac Version</a>
                 </div>
-                <p style="font-size: 0.75rem; color: #94a3b8; margin-top: 15px;">
+                <div class="tv-note">
                     Once downloaded, run the file and share your ID & password with us
-                </p>
+                </div>
             </div>
         </div>
 
         <div class="footer">
             <strong>CompNet</strong><br>
-            ABN: 55 448 948 4520<br>
-            Putting the human back in IT
+            ABN: 55 448 948 4520
         </div>
     </div>
 </body>
