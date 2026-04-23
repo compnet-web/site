@@ -2,136 +2,443 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <!-- This makes it look good on phones -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CompNet - IT Support & Contact</title>
+    <meta name="description" content="CompNet - Managed IT support for small businesses. Specialising in Microsoft 365, Google Workspace, Teams Phones, and Essential 8 cyber security compliance.">
+    <title>CompNet | Managed IT Support | Essential 8 Cyber Security</title>
     <style>
-        body {
-            font-family: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
-            background: #f4f6f9;
+        * {
             margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
             padding: 20px;
             display: flex;
             justify-content: center;
             align-items: center;
-            min-height: 100vh;
         }
+
         .card {
-            max-width: 600px;
+            max-width: 900px;
             width: 100%;
             background: white;
-            padding: 40px;
-            border-radius: 24px;
-            box-shadow: 0 20px 35px -10px rgba(0,0,0,0.1);
+            border-radius: 32px;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+            overflow: hidden;
+            transition: transform 0.2s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-4px);
+        }
+
+        .header {
+            background: linear-gradient(135deg, #1e2a3e 0%, #0f172a 100%);
+            padding: 40px 40px 30px 40px;
             text-align: center;
         }
-        h1 {
-            color: #1e2a3e;
-            font-size: 2.2rem;
-            margin-bottom: 10px;
+
+        .logo {
+            max-width: 100%;
+            height: auto;
+            max-height: 80px;
+            margin-bottom: 20px;
         }
-        .tagline {
-            color: #2c7da0;
-            font-weight: 600;
-            margin-bottom: 30px;
-            border-bottom: 2px solid #eef2f6;
+
+        .motto {
+            color: #a5f3fc;
+            font-size: 1rem;
+            letter-spacing: 1px;
+            font-weight: 500;
+            border-top: 1px solid rgba(255,255,255,0.1);
             display: inline-block;
-            padding-bottom: 5px;
+            padding-top: 15px;
         }
-        .contact-info {
+
+        .content {
+            padding: 40px;
+        }
+
+        .services {
             background: #f8fafc;
             border-radius: 20px;
-            padding: 20px;
-            margin: 25px 0;
+            padding: 25px;
+            margin-bottom: 30px;
         }
-        .phone {
-            font-size: 1.8rem;
+
+        .services h2 {
+            color: #1e2a3e;
+            font-size: 1.3rem;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .service-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-top: 15px;
+        }
+
+        .service-tag {
+            background: white;
+            border: 1px solid #e2e8f0;
+            padding: 8px 16px;
+            border-radius: 40px;
+            font-size: 0.85rem;
+            font-weight: 500;
+            color: #1e2a3e;
+            transition: all 0.2s;
+        }
+
+        .service-tag:hover {
+            background: #1e2a3e;
+            color: white;
+            border-color: #1e2a3e;
+        }
+
+        /* Essential 8 Section */
+        .essential8 {
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+            border-radius: 20px;
+            padding: 25px;
+            margin-bottom: 30px;
+            color: white;
+        }
+
+        .essential8 h2 {
+            font-size: 1.3rem;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .essential8-sub {
+            color: #94a3b8;
+            font-size: 0.85rem;
+            margin-bottom: 20px;
+            border-bottom: 1px solid #334155;
+            padding-bottom: 15px;
+        }
+
+        .ess-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin: 20px 0;
+        }
+
+        .ess-item {
+            background: rgba(255,255,255,0.05);
+            border-radius: 12px;
+            padding: 12px;
+            transition: all 0.2s;
+        }
+
+        .ess-item:hover {
+            background: rgba(255,255,255,0.1);
+            transform: translateX(4px);
+        }
+
+        .ess-number {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #38bdf8;
+            margin-bottom: 5px;
+        }
+
+        .ess-title {
+            font-weight: 600;
+            font-size: 0.85rem;
+            margin-bottom: 5px;
+        }
+
+        .ess-desc {
+            font-size: 0.7rem;
+            color: #cbd5e1;
+            line-height: 1.4;
+        }
+
+        .ess-cta {
+            background: #38bdf8;
+            color: #0f172a;
+            text-align: center;
+            padding: 12px;
+            border-radius: 12px;
+            font-weight: 600;
+            font-size: 0.85rem;
+            margin-top: 15px;
+            transition: all 0.2s;
+        }
+
+        .ess-cta:hover {
+            background: #7dd3fc;
+            transform: scale(1.01);
+        }
+
+        .ess-cta a {
+            color: #0f172a;
+            text-decoration: none;
+            display: block;
+        }
+
+        .contact-card {
+            background: linear-gradient(135deg, #fef2e8 0%, #ffe8f0 100%);
+            border-radius: 20px;
+            padding: 25px;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        .phone-number {
+            font-size: 2rem;
             font-weight: bold;
             color: #0f172a;
             letter-spacing: -0.5px;
+            margin: 10px 0;
         }
-        .phone a {
+
+        .phone-number a {
             text-decoration: none;
             color: #0f172a;
         }
-        .email a {
+
+        .phone-number a:hover {
+            color: #2c7da0;
+        }
+
+        .email-link {
+            font-size: 1.2rem;
+            margin: 10px 0;
+        }
+
+        .email-link a {
             color: #2c7da0;
             text-decoration: none;
-            font-size: 1.2rem;
             font-weight: 500;
         }
+
+        .email-link a:hover {
+            text-decoration: underline;
+        }
+
         .divider {
             width: 50px;
             height: 2px;
             background: #cbd5e1;
             margin: 20px auto;
         }
-        .download-links {
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-            flex-wrap: wrap;
-            margin: 30px 0 20px;
+
+        .teamviewer-section {
+            text-align: center;
+            padding: 20px;
+            background: #f1f5f9;
+            border-radius: 20px;
+            margin-bottom: 20px;
         }
-        .btn {
-            background: #1e293b;
-            color: white;
-            padding: 12px 24px;
-            border-radius: 40px;
-            text-decoration: none;
-            font-weight: 600;
-            transition: 0.2s;
+
+        .btn-teamviewer {
             display: inline-flex;
             align-items: center;
-            gap: 8px;
+            gap: 10px;
+            background: #1e2a3e;
+            color: white;
+            padding: 14px 28px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            margin: 10px 0;
+            transition: all 0.2s;
+            font-size: 1rem;
         }
-        .btn:hover {
+
+        .btn-teamviewer:hover {
             background: #2c7da0;
             transform: scale(1.02);
+            box-shadow: 0 10px 20px -5px rgba(0,0,0,0.2);
         }
-        .note {
+
+        .os-links {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+            margin-top: 15px;
+        }
+
+        .os-link {
+            color: #2c7da0;
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+
+        .os-link:hover {
+            text-decoration: underline;
+        }
+
+        .footer {
+            background: #f8fafc;
+            padding: 20px 40px;
+            text-align: center;
+            border-top: 1px solid #e2e8f0;
             font-size: 0.8rem;
             color: #64748b;
-            margin-top: 30px;
-            border-top: 1px solid #eef2f6;
-            padding-top: 20px;
+        }
+
+        .abn {
+            font-size: 0.75rem;
+            margin-top: 8px;
+            color: #94a3b8;
+        }
+
+        @media (max-width: 600px) {
+            .content {
+                padding: 25px;
+            }
+            .phone-number {
+                font-size: 1.5rem;
+            }
+            .header {
+                padding: 30px 20px;
+            }
+            .ess-grid {
+                grid-template-columns: 1fr;
+            }
         }
     </style>
 </head>
 <body>
     <div class="card">
-        <h1>CompNet</h1>
-        <div class="tagline">Reliable IT Support & Solutions</div>
+        <div class="header">
+            <img src="CompNet-Logo-long.JPG" alt="CompNet Logo" class="logo" onerror="this.style.display='none'">
+            <div class="motto">✨ Putting the human back in IT ✨</div>
+        </div>
 
-        <div class="contact-info">
-            <div style="margin-bottom: 15px;">
-                <div style="font-weight: 600; color: #475569; margin-bottom: 5px;">📞 24/7 Support Hotline</div>
-                <div class="phone">
-                    <a href="tel:+614XXXXXXXX">➡️ **Your Best Number** ⬅️</a>
+        <div class="content">
+            <!-- Services We Offer -->
+            <div class="services">
+                <h2>🖥️ What We Do</h2>
+                <p style="color: #475569; margin-bottom: 15px;">Complete managed IT support for small businesses. We handle all your technology needs so you can focus on what you do best.</p>
+                <div class="service-grid">
+                    <span class="service-tag">📊 Microsoft 365</span>
+                    <span class="service-tag">☁️ Google Workspace</span>
+                    <span class="service-tag">📞 Teams Phone Systems</span>
+                    <span class="service-tag">🔒 Essential 8 Compliance</span>
+                    <span class="service-tag">💾 Data Backup</span>
+                    <span class="service-tag">🌐 Network Setup</span>
+                    <span class="service-tag">🖥️ Hardware & Software</span>
+                    <span class="service-tag">🚀 24/7 Monitoring</span>
                 </div>
             </div>
-            <div class="divider"></div>
-            <div>
-                <div style="font-weight: 600; color: #475569; margin-bottom: 5px;">✉️ Email Us</div>
-                <div class="email">
-                    <a href="mailto:hello@compnet.com.au">➡️ **Your Email** ⬅️</a>
+
+            <!-- Essential 8 Cyber Security Section -->
+            <div class="essential8">
+                <h2>
+                    <span>🛡️</span> 
+                    Essential 8 Cyber Security
+                </h2>
+                <div class="essential8-sub">
+                    Australian Government-backed protection framework | Maturity Level 1, 2 & 3
                 </div>
+                <p style="font-size: 0.9rem; margin-bottom: 15px; color: #e2e8f0;">
+                    We help small businesses achieve and maintain Essential 8 compliance — the gold standard for protecting against 85% of cyber threats.
+                </p>
+                
+                <div class="ess-grid">
+                    <div class="ess-item">
+                        <div class="ess-number">01</div>
+                        <div class="ess-title">Application Control</div>
+                        <div class="ess-desc">Block unauthorised software from running</div>
+                    </div>
+                    <div class="ess-item">
+                        <div class="ess-number">02</div>
+                        <div class="ess-title">Patch Applications</div>
+                        <div class="ess-desc">Within 48 hours for critical vulnerabilities</div>
+                    </div>
+                    <div class="ess-item">
+                        <div class="ess-number">03</div>
+                        <div class="ess-title">Configure Office Macros</div>
+                        <div class="ess-desc">Block macros from untrusted sources</div>
+                    </div>
+                    <div class="ess-item">
+                        <div class="ess-number">04</div>
+                        <div class="ess-title">User Hardening</div>
+                        <div class="ess-desc">Remove unnecessary admin rights</div>
+                    </div>
+                    <div class="ess-item">
+                        <div class="ess-number">05</div>
+                        <div class="ess-title">Multi-Factor Authentication</div>
+                        <div class="ess-desc">MFA for all remote access</div>
+                    </div>
+                    <div class="ess-item">
+                        <div class="ess-number">06</div>
+                        <div class="ess-title">Daily Backups</div>
+                        <div class="ess-desc">Immutable, tested, and recoverable</div>
+                    </div>
+                    <div class="ess-item">
+                        <div class="ess-number">07</div>
+                        <div class="ess-title">Patch Operating Systems</div>
+                        <div class="ess-desc">Monthly patching with emergency updates</div>
+                    </div>
+                    <div class="ess-item">
+                        <div class="ess-number">08</div>
+                        <div class="ess-title">Restrict Admin Privileges</div>
+                        <div class="ess-desc">Just-in-time admin access only</div>
+                    </div>
+                </div>
+                
+                <div class="ess-cta">
+                    <a href="mailto:support@comp.net.au?subject=Essential%208%20Assessment%20Request">
+                        📋 Request a free Essential 8 health check →
+                    </a>
+                </div>
+            </div>
+
+            <!-- Contact Information -->
+            <div class="contact-card">
+                <div style="font-size: 0.85rem; font-weight: 600; color: #2c7da0; text-transform: uppercase; letter-spacing: 1px;">Need help? We're here.</div>
+                <div class="phone-number">
+                    📞 <a href="tel:+61280077729">+61 2 8007 7729</a>
+                </div>
+                <div class="divider"></div>
+                <div class="email-link">
+                    ✉️ <a href="mailto:support@comp.net.au">support@comp.net.au</a>
+                </div>
+                <div style="font-size: 0.85rem; color: #475569; margin-top: 15px;">
+                    ⏰ Response within 1 hour during business hours
+                </div>
+            </div>
+
+            <!-- Remote Support Download -->
+            <div class="teamviewer-section">
+                <div style="font-size: 1.1rem; font-weight: 600; margin-bottom: 10px;">🆘 Remote Support</div>
+                <p style="color: #475569; font-size: 0.9rem; margin-bottom: 15px;">Click below to download TeamViewer. Our technician will guide you.</p>
+                <a href="https://get.teamviewer.com/compnet" class="btn-teamviewer" target="_blank">
+                    ⬇️ Download TeamViewer
+                </a>
+                <div class="os-links">
+                    <a href="https://get.teamviewer.com/compnet" class="os-link">Windows Version</a>
+                    <span style="color: #cbd5e1;">|</span>
+                    <a href="https://get.teamviewer.com/compnet" class="os-link">Mac Version</a>
+                </div>
+                <p style="font-size: 0.75rem; color: #94a3b8; margin-top: 15px;">
+                    Once downloaded, run the file and share your ID & password with us
+                </p>
             </div>
         </div>
 
-        <div>
-            <h3 style="color: #1e2a3e; font-size: 1.2rem;">⬇️ Quick Remote Support</h3>
-            <div class="download-links">
-                <a href="https://www.teamviewer.com/en/download/" class="btn" target="_blank">💻 Download TeamViewer</a>
-                <a href="https://www.teamviewer.com/en/download/mac/" class="btn" target="_blank">🍏 Mac Version</a>
-            </div>
-            <p style="font-size: 0.9rem; color: #475569;">Click the link, run the file, and read us your ID & Password.</p>
-        </div>
-
-        <div class="note">
-            <strong>CompNet Pty Ltd</strong><br>
-            ABN: 12 345 678 910<br>
-            ⚡ For urgent issues, please call rather than email.
+        <div class="footer">
+            <strong>CompNet</strong><br>
+            ABN: 55 448 948 4520<br>
+            Putting the human back in IT
         </div>
     </div>
 </body>
